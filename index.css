@@ -1,14 +1,10 @@
 nav ul{
-    font-weight: 500;
+    font-weight: bold;
     padding-right: 60px;
     font-size: large;  
      
     
 }
-.caro{
-    margin-bottom: 20px;
-}
-
 
 .latest h4{ 
     padding: 8px 15px;
@@ -17,6 +13,15 @@ nav ul{
     border-right: 0.5px solid #f0f1f2;
     border-top: 0.5px solid #f0f1f2;
     border-bottom: 0.5px solid #f0f1f2;
+   
+}
+.latest a{
+    color: black;
+}
+.collapse a:hover{
+    background-color: #269ff0;
+    border-radius: 25px;
+
    
 }
 .heading,.heading1,.heading2
@@ -35,3 +40,32 @@ nav ul{
 .heading2{
     border-left: 8px solid blue;
 }
+footer {
+    background-color: #007bff;
+    color: white;
+    
+}
+footer a{
+    color: white;
+}
+/* 
+.col-md-6 .card-img-top {
+  
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
+} */
+@media (min-width: 768px) {
+    .col-md-6 .card-img-top {
+        height: 30vh;
+        width: 100%;
+        object-fit: cover;
+    }
+  }
+  @media (min-width: 768px) {
+    .col-md-6 .card-body {
+        height: 30vh;
+        width: 100%;
+        
+    }
+  }
