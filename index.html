@@ -7,11 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Coustard&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
+
     <title>Sports Feed</title>
 </head>
 
@@ -36,11 +44,16 @@
                 <a href="#" style="text-decoration: none;"><li class="nav-item" style="margin:0 35px;">
                     <span class="nav-link" href="#" style="color: white;">Badminton</span>
                 </li></a>
+                 <a href="#" style="text-decoration: none;"><li class="nav-item" style="margin:0 35px;"  data-toggle="modal" data-target="#modalLRForm">
+                    <span class="nav-link" href="#" style="color: white;">Login</span>
+                </li></a>
+                <!-- modal -->
+              
+
             </ul>
         </div>
     </nav>
     <br>
-
     <div class="container">
 
         <!-- carousel -->
@@ -268,8 +281,98 @@
   </footer>
   <!-- Footer -->
   
-  <!-- Footer -->
-
+  <!-- modal -->
+  <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+      <!--Content-->
+      <div class="modal-content">
+  
+        <!--Modal cascading tabs-->
+        <div class="modal-c-tabs">
+  
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs md-tabs light-blue" role="tablist" >
+            <li class="nav-item  col-md-6">
+              <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab" style="text-align:center;"><i class="fas fa-user mr-1"></i>
+                Login</a>
+            </li>
+  
+            <li class="nav-item col-md-6">
+              <a class="nav-link" data-toggle="tab" href="#panel8" role="tab" style="text-align:center;"><i class="fas fa-user-plus mr-1"></i>
+                Register</a>
+            </li>
+          </ul>
+  
+          <!-- Tab panels -->
+          <div class="tab-content">
+  
+            <!--Panel 7-->
+            <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+  
+              <!--Body-->
+              <div class="modal-body mb-1">
+                    
+                  <i class="fas fa-envelope"> Your email:</i>
+                  <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                  <br>                
+  
+                  <i class="fas fa-lock"> Your password:</i>
+                  <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+                  <br>
+                 
+              </div>
+  
+              <!--Footer-->
+              <div class="modal-footer">
+                <div class="options text-center text-md-left mt-1">
+                  <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                  <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                </div>
+                <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+              </div>
+  
+            </div>
+            <!--/.Panel 7-->
+  
+            <!--Panel 8-->
+            <div class="tab-pane fade" id="panel8" role="tabpanel">
+  
+              <!--Body-->
+              <div class="modal-body">
+                <i class="fas fa-envelope"> Your email:</i>
+                  <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                  <br>                
+  
+                  <i class="fas fa-lock"> Your password:</i>
+                  <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+                  <br>
+  
+                  <i class="fas fa-lock"> Repeat password:</i>
+                  <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                  <!-- <label data-error="wrong" data-success="right" for="modalLRInput14"></label> -->
+                </div>
+  
+                <div class="text-center form-sm mt-2">
+                  <button class="btn btn-primary">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+                </div>
+                <br>
+              
+              <!--Footer-->
+              <div class="modal-footer">
+                <div class="options text-right">
+                  <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+                </div>
+                <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!--/.Panel 8-->
+          
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+  
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
