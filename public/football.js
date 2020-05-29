@@ -1,13 +1,13 @@
 //grab the news container
 let mostp = document.getElementById('mostp')
-let cric = document.getElementById('cric')
+let footb = document.getElementById('footb')
 
 //create a get request
 const xhr = new XMLHttpRequest();
-const c = new XMLHttpRequest();
+const f = new XMLHttpRequest();
 
-xhr.open('GET', 'http://newsapi.org/v2/top-headlines?country=in&category=sports&q=cricket&apiKey=977c1e621d6048138e9d5a1d76f8e927', true);
-c.open('GET', 'https://newsapi.org/v2/everything?q=cricket&apiKey=977c1e621d6048138e9d5a1d76f8e927', true);
+xhr.open('GET', 'http://newsapi.org/v2/top-headlines?country=in&category=sports&q=football&apiKey=977c1e621d6048138e9d5a1d76f8e927', true);
+f.open('GET', 'https://newsapi.org/v2/everything?q=football&apiKey=977c1e621d6048138e9d5a1d76f8e927', true);
 
 xhr.onload = function () {
     if (this.status === 200) {
@@ -20,9 +20,9 @@ xhr.onload = function () {
         let newshtml = ""
         let n = articles.length
         if (n > 4) {
-            n = 8;
+            n = 4;
         }
-        for (var i = 3; i < n; i++) {
+        for (var i = 0; i < n; i++) {
             let news = `<li class="list-group-item"><a href="${articles[i].url}">${articles[i].title}
                         </a></li>`;
 
@@ -35,7 +35,7 @@ xhr.onload = function () {
         console.log("Some error occured")
     }
 }
-c.onload = function () {
+f.onload = function () {
     if (this.status === 200) {
         console.log('yes')
         let json = JSON.parse(this.responseText)
@@ -43,10 +43,10 @@ c.onload = function () {
         console.log(json)
         let articles = json.articles
 
-        let crichtml = ""
+        let foothtml = ""
 
         for (var i = 0; i < 16; i++) {
-            let cricket = ` <div class="col-lg-3 col-md-6 col-sm-12">
+            let foot = ` <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="card mb-3">
             <a href="${articles[i].url}"><img src="${articles[i].urlToImage}"
                     class="card-img-top" alt="..."><a>
@@ -58,9 +58,9 @@ c.onload = function () {
                 </div>
         </div>`;
 
-            crichtml += cricket;
+            foothtml += foot;
         }
-        cric.innerHTML = crichtml;
+        footb.innerHTML = foothtml;
     }
     else {
         console.log("Some error occured")
@@ -68,4 +68,4 @@ c.onload = function () {
 }
 
 xhr.send();
-c.send();
+f.send();
