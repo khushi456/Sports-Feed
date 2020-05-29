@@ -1,7 +1,7 @@
 //grab the news container
 let mostp = document.getElementById('mostp')
 let footb = document.getElementById('footb')
-
+let news1 = document.getElementById('news1')
 //create a get request
 const xhr = new XMLHttpRequest();
 const f = new XMLHttpRequest();
@@ -18,6 +18,7 @@ xhr.onload = function () {
         let articles = json.articles
 
         let newshtml = ""
+        
         let n = articles.length
         if (n > 4) {
             n = 4;
@@ -44,8 +45,27 @@ f.onload = function () {
         let articles = json.articles
 
         let foothtml = ""
+        let posthtml = `<div class="carousel-item active">
+        <a href="${articles[0].url}"><img src="${articles[0].urlToImage}"
+            class="d-block w-100" alt="..."></a>
+        <div class="carousel-caption d-none d-md-block">
+            <p>${articles[0].title}</p>
+        </div>
+    </div>`
 
-        for (var i = 0; i < 16; i++) {
+        for (var i = 1; i < 3; i++) {
+            let post = `<div class="carousel-item">
+            <a href="${articles[i].url}"><img src="${articles[i].urlToImage}"
+                class="d-block w-100" alt="..."></a>
+            <div class="carousel-caption d-none d-md-block">
+                <p>${articles[i].title}</p>
+            </div>
+        </div>`;
+
+            posthtml += post;
+        }
+
+        for (var i = 3; i < 19; i++) {
             let foot = ` <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="card mb-3">
             <a href="${articles[i].url}"><img src="${articles[i].urlToImage}"
@@ -61,6 +81,7 @@ f.onload = function () {
             foothtml += foot;
         }
         footb.innerHTML = foothtml;
+        news1.innerHTML = posthtml;
     }
     else {
         console.log("Some error occured")
