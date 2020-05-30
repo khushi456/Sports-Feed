@@ -1,14 +1,12 @@
 nav ul{
     font-weight: 500;
     padding-right: 20px;
-    font-size: medium;  
-    
-     
-    
+    font-size: large;  
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: small;
+    font-size: medium;
 }
 .latest h4{ 
     padding: 8px 15px;
@@ -24,9 +22,7 @@ body{
 }
 .collapse a:hover{
     background-color: #269ff0;
-    border-radius: 25px;
-
-   
+    border-radius: 25px;  
 }
 .heading,.heading1,.heading2
 {
