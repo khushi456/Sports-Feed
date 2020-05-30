@@ -23,19 +23,19 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) => {
   res.render('index')
 })
-app.get('/livescore', (req, res)=> {
+app.get('/livescore', (req, res) => {
   res.render('livescore')
 })
-app.get('/schedule', (req, res)=> {
+app.get('/schedule', (req, res) => {
   res.render('schedule')
 })
-app.get('/cricket', (req, res)=> {
+app.get('/cricket', (req, res) => {
   res.render('cricket')
 })
-app.get('/football', (req, res)=> {
+app.get('/football', (req, res) => {
   res.render('football')
 })
-app.get('/tennis', (req, res)=> {
+app.get('/tennis', (req, res) => {
   res.render('tennis')
 })
 
@@ -44,5 +44,5 @@ app.get('*', (req, res) => {
   res.send('<h1 style="text-align:center;">404!</h1>')
 })
 app.listen(port, (req, res) => {
-  console.log("Server is running on port 3000...")
+  console.log("Server is running on port " + port)
 })
