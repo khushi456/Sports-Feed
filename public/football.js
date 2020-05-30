@@ -20,8 +20,8 @@ xhr.onload = function () {
         let newshtml = ""
         
         let n = articles.length
-        if (n > 4) {
-            n = 4;
+        if (n > 3) {
+            n = 3;
         }
         for (var i = 0; i < n; i++) {
             let news = `<li class="list-group-item"><a href="${articles[i].url}">${articles[i].title}

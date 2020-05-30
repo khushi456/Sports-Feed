@@ -42,7 +42,7 @@ xhr.onload = function () {
             posthtml += post;
         }
 
-        for (var i = 3; i < 8; i++) {
+        for (var i = 3; i < 6; i++) {
             let news = `<li class="list-group-item"><a href="${articles[i].url}">${articles[i].title}
                         </a></li>`;
 

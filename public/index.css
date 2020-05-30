@@ -1,11 +1,15 @@
 nav ul{
-    font-weight: bold;
-    padding-right: 60px;
-    font-size: large;  
+    font-weight: 500;
+    padding-right: 20px;
+    font-size: medium;  
+    
      
     
 }
-
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: small;
+}
 .latest h4{ 
     padding: 8px 15px;
     
@@ -40,11 +44,7 @@ nav ul{
 .heading2{
     border-left: 8px solid blue;
 }
-footer {
-    background-color: #007bff;
-    color: white;
-    
-}
+
 footer a{
     color: white;
 }
@@ -52,17 +52,30 @@ footer a{
     color: black; 
 }
  a:hover{
-    color:  rgb(21, 43, 168);
+    color:  rgb(8, 35, 187);
     text-decoration:none;
 
 }
-/* 
-.col-md-6 .card-img-top {
-  
-    height: 30vh;
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    object-fit: cover;
-} */
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+  }
+/* schedule */
+#sch{
+    line-height: 10px;
+}
+#sch .list-group-item{
+    padding-bottom: 0px;
+}
+#sch li:nth-child(odd) 
+{
+     background: #f8f9fa; 
+}
 @media (min-width: 768px) {
     .col-md-6 .card-img-top {
         height: 30vh;
@@ -72,7 +85,7 @@ footer a{
   }
   @media (min-width: 768px) {
     .col-md-6 .card-body {
-        height: 45vh;
+        /* height: 45vh; */
         width: 100%;
         
     }

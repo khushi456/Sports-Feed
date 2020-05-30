@@ -38,11 +38,8 @@ xhr.onload = function () {
 
             posthtml += post;
         }
-        let n = articles.length
-        if (n > 4) {
-            n = 8;
-        }
-        for (var i = 3; i < n; i++) {
+        
+        for (var i = 3; i < 6; i++) {
             let news = `<li class="list-group-item"><a href="${articles[i].url}">${articles[i].title}
                         </a></li>`;
 
@@ -65,14 +62,14 @@ c.onload = function () {
 
         let crichtml = ""
 
-        for (var i = 0; i < 16; i++) {
+        for (var i = 0; i < 12; i++) {
             let cricket = ` <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="card mb-3">
             <a href="${articles[i].url}"><img src="${articles[i].urlToImage}"
                     class="card-img-top" alt="..."><a>
-                <div class="card-body">
+                <div class="card-body" >
                 <h6 class="card-title"><a href="${articles[i].url}">${articles[i].title}</a></h6>
-                    <p class="card-text">${articles[i].description}</p>
+                    <p class="card-text" >${articles[i].description}</p>
                     <p class="card-text"><small class="text-muted">${articles[i].publishedAt}</small></p>
                 </div>
                 </div>

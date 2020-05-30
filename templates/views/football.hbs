@@ -27,38 +27,7 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="/"
-            style="font-weight: 500; font-family: 'Coustard', serif; margin-left:35px;">Sports Feed</a>
-        <button class="navbar-toggler btn-sm" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <a href="/cricket" style="text-decoration: none;">
-                    <li class="nav-item" style="margin: 0 35px;">
-                        <span class="nav-link" href="" style="color: white;">Cricket</span>
-                    </li>
-                </a>
-                <a href="/football" style="text-decoration: none;">
-                    <li class="nav-item" style="margin:0 35px;">
-                        <span class="nav-link" href="#" style="color: white;">Football</span>
-                    </li>
-                </a>
-                <a href="/tennis" style="text-decoration: none;">
-                    <li class="nav-item" style="margin:0 35px;">
-                        <span class="nav-link" href="#" style="color: white;">Tennis</span>
-                    </li>
-                </a>
-
-                <!-- modal -->
-
-
-            </ul>
-        </div>
-    </nav>
+    {{>header}}
     <br>
     <div class="container">
 
@@ -100,15 +69,8 @@
         <div class="row row2" id="footb">
             <!-- ---------- -->
         </div>
-
-
-
-
     </div>
-    <br>
-
-
-
+    <br><br>
     <!-- Footer -->
     <footer class="page-footer">
 
@@ -119,11 +81,7 @@
         <!-- Copyright -->
 
     </footer>
-
-
     <!-- Footer -->
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="football.js"></script>
